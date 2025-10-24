@@ -1,0 +1,291 @@
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: linear-gradient(135deg, #e3f2fd, #f1f8e9);
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 10px;
+}
+
+/* ---------- App Container ---------- */
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  padding: 30px 35px;
+  border-radius: 18px;
+  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Header ---------- */
+h2 {
+  text-align: center;
+  color: #2d3436;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.greeting {
+  text-align: center;
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+/* ---------- Balance ---------- */
+.balance {
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(116, 185, 255, 0.3);
+}
+
+.balance h4 {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.balance h1 {
+  font-size: 36px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+/* ---------- Income & Expense Section ---------- */
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 12px;
+}
+
+.inc-exp-container div {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.inc-exp-container h4 {
+  color: #555;
+  font-weight: 500;
+}
+
+.money.plus {
+  color: #27ae60;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.money.minus {
+  color: #c0392b;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ---------- Monthly Summary ---------- */
+.monthly-summary {
+  background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+  border-radius: 15px;
+  padding: 18px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(255, 168, 0, 0.2);
+}
+
+.monthly-summary h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #2d3436;
+}
+
+.summary-box p {
+  font-size: 15px;
+  color: #2f3640;
+  margin: 5px 0;
+}
+
+/* ---------- Transaction List ---------- */
+.transaction-list {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.list {
+  list-style-type: none;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: #fefefe;
+  border-left: 5px solid;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.list li.plus {
+  border-color: #27ae60;
+}
+
+.list li.minus {
+  border-color: #c0392b;
+}
+
+.list li:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- Buttons ---------- */
+.delete-btn {
+  background: #ff7675;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background: #d63031;
+}
+
+/* ---------- Add Transaction Form ---------- */
+form {
+  margin-top: 10px;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 5px rgba(116, 185, 255, 0.4);
+}
+
+/* ---------- Add Button ---------- */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0px 5px 15px rgba(162, 155, 254, 0.4);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #5f27cd, #9c88ff);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dcdde1;
+  border-radius: 5px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 550px) {
+  .container {
+    padding: 20px;
+  }
+  .inc-exp-container {
+    flex-direction: column;
+  }
+}
+.ai-box {
+  background: linear-gradient(135deg, #dfe6e9, #b2bec3);
+  padding: 15px;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ai-box h3 {
+  color: #2d3436;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.ai-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ai-box li {
+  font-size: 15px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
